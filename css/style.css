@@ -360,14 +360,18 @@
   /* Mobile Nav Styling */
 
   #mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     padding-top: 18px;
+    padding-bottom: 40px;
     bottom: 0;
     z-index: 998;
     background: rgba(6, 12, 34, 0.8);
     left: -260px;
-    width: 260px;
+    width: 210px;
     overflow-y: auto;
     transition: 0.4s;
   }
@@ -443,6 +447,37 @@
   body.mobile-nav-active #mobile-nav-toggle {
     color: #fff;
   }
+
+  /* mobile menü social links */
+  
+  /* .social-links-top {
+    display: none;
+  }
+  .social-links-top-active {
+    display: flex;
+    justify-content: space-around
+  }
+
+  .social-links-top a {
+    font-size: 18px;
+    display: inline-block;
+    background: #222636;
+    color: #eee;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 3px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+
+  .social-links-top a:hover {
+    background: #f82249;
+    color: #fff;
+  } */
+  
 
   /*--------------------------------------------------------------
   # Intro Section
@@ -928,62 +963,6 @@
     content: "\f055" !important;
   }
 
-  /*--------------------------------------------------------------
-  # Subscribe Section
-  --------------------------------------------------------------*/
-
-  #subscribe {
-    padding: 60px;
-    background: url(../img/bottombackground.jpg) center center no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
-  }
-
-  #subscribe:before {
-    content: "";
-    background: rgba(6, 12, 34, 0.6);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    
-  }
-
-  #subscribe .section-header h2,
-  #subscribe p {
-    color: #fff;
-  }
-
-  #subscribe input {
-    background: #fff;
-    color: #060c22;
-    border: 0;
-    outline: none;
-    margin: 0;
-    padding: 9px 20px;
-    border-radius: 50px;
-    font-size: 14px;
-  }
-
-  #subscribe button {
-    border: 0;
-    padding: 9px 25px;
-    cursor: pointer;
-    background: #f82249;
-    color: #fff;
-    transition: all 0.3s ease;
-    outline: none;
-    font-size: 14px;
-    border-radius: 50px;
-  }
-
-  #subscribe button:hover {
-    background: #e0072f;
-  }
-
 
   /*--------------------------------------------------------------
   # Contact Section
@@ -1003,11 +982,10 @@
   }
 
   #venue .venue-info {
-    background: url("../img/venue-info-bg.jpg") top center no-repeat;
-    background-size: cover;
     position: relative;
     padding-top: 60px;
     padding-bottom: 60px;
+    
   }
 
   #venue .venue-info:before {
